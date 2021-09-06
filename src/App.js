@@ -8,8 +8,8 @@ import './sass/App.css';
 function App() {
   return (
     <main className="App">
-      <Header />
       <BrowserRouter>
+        <Header />
         <Route path="/" component={Rockets} />
         <Route path="/mission" component={Mission} />
         <Route path="/profile" component={Profile} />
