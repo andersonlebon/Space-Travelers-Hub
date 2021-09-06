@@ -14,7 +14,7 @@
   width: 30%;
   height: 100%;
   display: flex;
-  direction: row;
+  flex-direction: row;
 }
 
 .logo img {
@@ -26,10 +26,6 @@
 
 .logo h1 {
   margin-left: 2.5%;
-}
-
-body {
-  margin: 0px 0px;
 }
 
 nav {
@@ -44,6 +40,10 @@ nav ul {
   height: 100%;
 }
 
+li {
+  list-style: none;
+}
+
 nav ul li {
   margin-top: 8%;
   margin-left: 7.5%;
@@ -55,6 +55,4 @@ nav ul li:nth-child(3) {
   border-left: 2px solid lightgray;
 }
 
-li {
-  list-style: none;
-}
+

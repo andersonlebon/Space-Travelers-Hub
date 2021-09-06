@@ -18,7 +18,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .logo img {
@@ -30,10 +33,6 @@
 
 .logo h1 {
   margin-left: 2.5%;
-}
-
-body {
-  margin: 0px 0px;
 }
 
 nav {
@@ -50,6 +49,10 @@ nav ul {
   height: 100%;
 }
 
+li {
+  list-style: none;
+}
+
 nav ul li {
   margin-top: 8%;
   margin-left: 7.5%;
@@ -61,9 +64,5 @@ nav ul li {
 
 nav ul li:nth-child(3) {
   border-left: 2px solid lightgray;
-}
-
-li {
-  list-style: none;
 }
 /*# sourceMappingURL=App.css.map */
