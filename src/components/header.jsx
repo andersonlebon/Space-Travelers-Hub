@@ -1,7 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '../images/planet.svg';
 
-const Header = () => {
-  return <header className="header"></header>;
-};
+const Header = () => (
+  <header className="header">
+    <div className="log">
+      <img src={logo} alt=" logo" />
+      <h1>Space travelers&apos; Hub</h1>
+    </div>
+    <nav className="nabar">
+      <ul>
+        <li>
+          <NavLink to="/">Rocket</NavLink>
+        </li>
+        <li>
+          <NavLink to="/mission">Mission</NavLink>
+        </li>
+        <li>
+          <NavLink to="/profile">My profile</NavLink>
+        </li>
+      </ul>
+    </nav>
+  </header>
+);
 
 export default Header;
