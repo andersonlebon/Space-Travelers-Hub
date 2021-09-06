@@ -15,10 +15,8 @@ const slice = createSlice({
     },
 
     reserveRocket: (rockets, action) => {
-      const index = rockets.findIndex(
-        (rocket) => rocket.id === action.payload.id
-      );
-      rockets[index].reserved = true;
+      const index = rockets.find((rocket) => rocket.id === action.payload.id);
+      index.reserved = true;
     },
   },
 });
