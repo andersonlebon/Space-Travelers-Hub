@@ -57,9 +57,9 @@ nav ul li {
   margin-top: 8%;
   margin-left: 7.5%;
   padding-left: 5%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 nav ul li:nth-child(3) {

@@ -48,11 +48,9 @@ nav ul li {
   margin-top: 8%;
   margin-left: 7.5%;
   padding-left: 5%;
-  height: fit-content;
+  height: min-content;
 }
 
 nav ul li:nth-child(3) {
   border-left: 2px solid lightgray;
 }
-
-
