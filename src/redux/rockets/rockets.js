@@ -23,4 +23,6 @@ const slice = createSlice({
   },
 });
 
+export const { getRockets, reserveRocket } = slice.actions;
+
 export default slice.reducer;
