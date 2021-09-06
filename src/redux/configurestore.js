@@ -10,4 +10,6 @@ const store = configureStore({
   reducer,
 });
 
+store.dispatch({ type: 'getRockets', payload: [1, 2, 2] });
+
 export default store;
