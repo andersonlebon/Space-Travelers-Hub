@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,KAAK;CACxB",
+    "sources": [
+        "App.scss",
+        "_header.scss",
+        "_mission.scss",
+        "_rockets.sass"
+    ],
+    "names": [],
+    "file": "App.css"
+}
