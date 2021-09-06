@@ -4,11 +4,11 @@ import logo from '../images/planet.svg';
 
 const Header = () => (
   <header className="header">
-    <div className="log">
+    <div className="logo">
       <img src={logo} alt=" logo" />
       <h1>Space travelers&apos; Hub</h1>
     </div>
-    <nav className="nabar">
+    <nav className="navbar">
       <ul>
         <li>
           <NavLink to="/">Rocket</NavLink>
