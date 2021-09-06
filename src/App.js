@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header';
 import Mission from './components/mission';
 import Profile from './components/profile';
@@ -10,9 +10,11 @@ function App() {
     <main className="App">
       <BrowserRouter>
         <Header />
-        <Route path="/" component={Rockets} />
-        <Route path="/mission" component={Mission} />
-        <Route path="/profile" component={Profile} />
+        <Switch>
+          <Route path="/" exact component={Rockets} />
+          <Route path="/mission" component={Mission} />
+          <Route path="/profile" component={Profile} />
+        </Switch>
       </BrowserRouter>
     </main>
   );
