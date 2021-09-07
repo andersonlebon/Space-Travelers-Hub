@@ -6,10 +6,10 @@ const Rocket = (props) => {
   return (
     <li className="card">
       <div className="card-img">
-        <img src="" alt="Rocket img" />
+        <img src={rocket.flickr_images} alt="Rocket img" />
       </div>
       <div className="card-body">
-        <h2 className="title">{rocket.name}</h2>
+        <h2 className="title">{rocket.rocket_name}</h2>
         <p>{rocket.description}</p>
         <button type="button">Reseve</button>
       </div>
@@ -18,6 +18,10 @@ const Rocket = (props) => {
 };
 
 Rocket.propTypes = {
-  rocket: Proptypes.shape({ description: Proptypes.string }).isRequired,
+  rocket: Proptypes.shape({
+    description: Proptypes.string,
+    rocket_name: Proptypes.string,
+    flickr_images: Proptypes.string,
+  }).isRequired,
 };
 export default Rocket;
