@@ -76,7 +76,7 @@ nav ul li:nth-child(3) {
 
 .rocket {
   height: 100%;
-  gap: 30px;
+  gap: 20px;
 }
 
 .rocket h2 {
@@ -92,6 +92,7 @@ nav ul li:nth-child(3) {
 .rocket-body {
   width: 90%;
   height: 100%;
+  padding: 0 5px;
 }
 
 * {

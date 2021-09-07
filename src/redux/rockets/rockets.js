@@ -36,7 +36,7 @@ const slice = createSlice({
 
     reserveRocket: (rockets, action) => {
       const index = rockets.find((rocket) => rocket.id === action.payload.id);
-      index.reserved = true;
+      index.reserved = !index.reserved;
     },
 
     getRocketsFail: (rockets) => rockets,

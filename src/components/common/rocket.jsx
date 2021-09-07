@@ -1,8 +1,14 @@
 import React from 'react';
 import Proptypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../../redux/rockets/rockets';
 
 const Rocket = (props) => {
   const { rocket } = props;
+  const dispatch = useDispatch();
+  const handelReserved = (id) => {
+    dispatch(reserveRocket({ id }));
+  };
   return (
     <li className="rocket d-flex w-100">
       <div className="rocket-img">
@@ -15,7 +21,7 @@ const Rocket = (props) => {
       <div className="rocket-body">
         <h2 className="title">{rocket.rocket_name}</h2>
         <p>
-          <span className="badge badge-info">Reserved</span>
+          <span className="badge badge-info mr-2">Reserved</span>
           {rocket.description}
         </p>
         <button className="btn btn-primary" type="button">
