@@ -3,7 +3,18 @@ import Proptypes from 'prop-types';
 
 const Rocket = (props) => {
   const { rocket } = props;
-  return <div className="card">{rocket.description}</div>;
+  return (
+    <li className="card">
+      <div className="card-img">
+        <img src="" alt="Rocket img" />
+      </div>
+      <div className="card-body">
+        <h2 className="title">{rocket.name}</h2>
+        <p>{rocket.description}</p>
+        <button type="button">Reseve</button>
+      </div>
+    </li>
+  );
 };
 
 Rocket.propTypes = {
