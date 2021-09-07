@@ -6,14 +6,15 @@ import Mission from './components/mission';
 import Profile from './components/profile';
 import Rockets from './components/rockets';
 import './sass/App.css';
-import { getRockets } from './redux/rockets/rockets';
+import { getRockets, getRocketsFromApi } from './redux/rockets/rockets';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const dispatch = useDispatch();
   const { rocketsReducer: store } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(getRockets([{ id: 1 }, { id: 2 }]));
+    getRocketsFromApi(dispatch, getRockets);
   }, []);
   console.log(store);
 
@@ -22,7 +23,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/" exact component={Rockets} />
+          <Route path="/" exact render={() => <Rockets store={store} />} />
           <Route path="/mission" component={Mission} />
           <Route path="/profile" component={Profile} />
         </Switch>
