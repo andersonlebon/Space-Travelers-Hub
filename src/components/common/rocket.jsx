@@ -21,7 +21,9 @@ const Rocket = (props) => {
       <div className="rocket-body">
         <h2 className="title">{rocket.rocket_name}</h2>
         <p>
-          <span className="badge badge-info mr-2">Reserved</span>
+          {rocket.reserved ? (
+            <span className="badge badge-info mr-2">Reserved</span>
+          ) : null}
           {rocket.description}
         </p>
         <button
@@ -40,7 +42,8 @@ Rocket.propTypes = {
   rocket: Proptypes.shape({
     description: Proptypes.string,
     id: Proptypes.string,
-    rocket_name: Proptypes.string,
+    rocket_name: Proptypes.bool,
+    reserved: Proptypes.string,
     flickr_images: Proptypes.string,
   }).isRequired,
 };
