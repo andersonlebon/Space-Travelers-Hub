@@ -28,7 +28,7 @@ const slice = createSlice({
           rocket_name,
           reserved: false,
           description,
-          flickr_images,
+          flickr_images: flickr_images[0],
         };
         rockets.push(newRocket);
       });
