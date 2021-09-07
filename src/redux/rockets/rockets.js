@@ -1,7 +1,3 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable camelcase */
-/* eslint-disable comma-dangle */
-/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -22,16 +18,18 @@ const slice = createSlice({
   reducers: {
     getRockets: (rockets, action) => {
       const apiRocket = action.payload;
-      apiRocket.forEach(({ rocket_name, description, flickr_images, id }) => {
-        const newRocket = {
-          id,
-          rocket_name,
-          reserved: false,
-          description,
-          flickr_images: flickr_images[0],
-        };
-        rockets.push(newRocket);
-      });
+      apiRocket.forEach(
+        ({ rocket_name: name, description, flickr_images: img, id }) => {
+          const newRocket = {
+            id,
+            rocket_name: name,
+            reserved: false,
+            description,
+            flickr_images: img[0],
+          };
+          rockets.push(newRocket);
+        }
+      );
     },
 
     reserveRocket: (rockets, action) => {
