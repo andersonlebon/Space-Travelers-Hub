@@ -19,7 +19,9 @@ const slice = createSlice({
     getRockets: (rockets, action) => {
       const apiRocket = action.payload;
       apiRocket.forEach(
-        ({ rocket_name: name, description, flickr_images: img, id }) => {
+        ({
+          rocket_name: name, description, flickr_images: img, id,
+        }) => {
           const newRocket = {
             id,
             rocket_name: name,
@@ -28,7 +30,7 @@ const slice = createSlice({
             flickr_images: img[0],
           };
           rockets.push(newRocket);
-        }
+        },
       );
     },
 
