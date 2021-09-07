@@ -24,7 +24,11 @@ const Rocket = (props) => {
           <span className="badge badge-info mr-2">Reserved</span>
           {rocket.description}
         </p>
-        <button className="btn btn-primary" type="button">
+        <button
+          onClick={() => handelReserved(rocket.id)}
+          className="btn btn-primary"
+          type="button"
+        >
           Reseve Rocket
         </button>
       </div>
@@ -35,6 +39,7 @@ const Rocket = (props) => {
 Rocket.propTypes = {
   rocket: Proptypes.shape({
     description: Proptypes.string,
+    id: Proptypes.string,
     rocket_name: Proptypes.string,
     flickr_images: Proptypes.string,
   }).isRequired,
