@@ -28,10 +28,12 @@ const Rocket = (props) => {
         </p>
         <button
           onClick={() => handelReserved(rocket.id)}
-          className="btn btn-primary"
+          className={
+            rocket.reserved ? 'btn btn-light border' : 'btn btn-primary'
+          }
           type="button"
         >
-          Reseve Rocket
+          {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
         </button>
       </div>
     </li>
