@@ -16,7 +16,6 @@ function App() {
   useEffect(() => {
     getRocketsFromApi(dispatch, getRockets);
   }, []);
-  console.log(store);
 
   return (
     <main className="App">
