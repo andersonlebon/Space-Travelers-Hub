@@ -1,0 +1,28 @@
+.rocket-section {
+  padding: 30px 70px;
+
+  ul {
+    gap: 30px;
+  }
+}
+
+.rocket {
+  height: 100%;
+  gap: 20px;
+
+  h2 {
+    font-size: 1.19rem;
+    font-weight: 600;
+  }
+}
+
+.rocket-img {
+  width: 200px;
+  height: 180px;
+}
+
+.rocket-body {
+  width: 90%;
+  height: 100%;
+  padding: 0 5px;
+}
