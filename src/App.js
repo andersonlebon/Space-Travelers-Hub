@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const dispatch = useDispatch();
-  const { rocketsReducer , missionReducer  } = useSelector((state) => state);
+  const { rocketsReducer, missionReducer } = useSelector((state) => state);
   useEffect(() => {
     getRocketsFromApi(dispatch, getRockets);
   }, []);
@@ -20,9 +20,22 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/" exact render={() => <Rockets store={rocketsReducer } />} />
-          <Route path="/mission" exact render={() => <Missions store={missionReducer } />} />
-          <Route path="/profile" component={Profile} />
+          <Route
+            path="/"
+            exact
+            render={() => <Rockets store={rocketsReducer} />}
+          />
+          <Route
+            path="/mission"
+            exact
+            render={() => <Missions store={missionReducer} />}
+          />
+          <Route
+            path="/profile"
+            render={() => (
+              <Profile rockets={rocketsReducer} missions={missionReducer} />
+            )}
+          />
         </Switch>
       </BrowserRouter>
     </main>

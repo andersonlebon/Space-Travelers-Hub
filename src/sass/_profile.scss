@@ -1,0 +1,26 @@
+.Profile {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+}
+
+.missions-profile{
+    width: 50%;
+}
+
+.profile-title {
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+
+.rockets-profile{
+    width: 50%;
+}
+
+.profile-li{
+    height: 50px;
+}
