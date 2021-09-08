@@ -43,9 +43,9 @@ const Rocket = (props) => {
 Rocket.propTypes = {
   rocket: Proptypes.shape({
     description: Proptypes.string,
-    id: Proptypes.string,
-    rocket_name: Proptypes.bool,
-    reserved: Proptypes.string,
+    id: Proptypes.number,
+    rocket_name: Proptypes.string,
+    reserved: Proptypes.bool,
     flickr_images: Proptypes.string,
   }).isRequired,
 };
