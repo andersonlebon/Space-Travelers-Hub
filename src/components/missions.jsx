@@ -8,8 +8,13 @@ const Missions = ({ store }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+<<<<<<< HEAD
     if (store.length === 0) {
       getMissionsFromApi(dispatch, getMissions);
+=======
+    if(store.length===0){
+    getMissionsFromApi(dispatch, getMissions);
+>>>>>>> d0946bc6226560d09a40e8576e7ceefc4d7ee19c
     }
   }, []);
 
