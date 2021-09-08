@@ -10,7 +10,7 @@ const Missions = ({ store }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if(store.length<0){
+    if(store.length===0){
     getMissionsFromApi(dispatch, getMissions);
     }
   }, []);
