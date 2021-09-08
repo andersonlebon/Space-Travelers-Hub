@@ -1,11 +1,50 @@
+/* eslint-disable react/jsx-indent-props */
 import React from 'react';
+import Proptypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveMission } from '../../redux/mission/mission';
 
-const Mission = () => (
-  <tr>
-    <th scope="row">Thaicom</th>
-    <td>Conubia. In. Lobortis luctus cum maecenas, consequat tincidunt Nulla nunc consequat. Sociosqu torquent eros Eget convallis maecenas. Risus aliquam varius hac lobortis. Sodales parturient et justo egestas tortor massa litora netus ad massa nibh. Vitae vel Curae; dolor tellus semper tincidunt fusce cubilia convallis habitant tristique consectetuer tempus, ut platea.</td>
-    <td><p className="ubadge">NOT A MENBER</p></td>
-    <td><button className="mission-button exit">Leave Mission</button></td>
-  </tr>
-);
+const Mission = (props) => {
+  const { mission } = props;
+  const dispatch = useDispatch();
+  const handelReserved = (mission_id) => {
+    dispatch(reserveMission({ mission_id }));
+    console.log(mission);
+  };
+  return (
+    <tr>
+      <th scope="row">{mission.mission_name}</th>
+      <td>{mission.description}</td>
+      <td>
+        <p className={
+            mission.reserved ? 'ubadge menber' : 'ubadge'
+          }
+        >
+          {mission.reserved ? 'Active Menber' : 'NOT MENBER'}
+        </p>
+      </td>
+      <td>
+        <button
+onClick={() => handelReserved(mission.mission_id)}
+         className={
+            mission.reserved ? 'mission-button exit' : 'mission-button'
+          }
+        >
+          {
+            mission.reserved ? 'Leave Mission' : 'Join Mission'
+          }
+        </button>
+      </td>
+    </tr>
+  );
+};
+
+Mission.propTypes = {
+  mission: Proptypes.shape({
+    description: Proptypes.string,
+    mission_id: Proptypes.number,
+    mission_name: Proptypes.string,
+    reserved: Proptypes.bool,
+  }).isRequired,
+};
 export default Mission;
