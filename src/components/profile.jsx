@@ -5,7 +5,6 @@ import React from 'react';
 
 const Profile = ({ rockets, missions }) => {
   const getReseveredItems = (store) => store.filter((element) => element.reserved === true);
-  console.log(rockets);
   return (
     <section className="Profile">
       <div className="misisions-profile">
