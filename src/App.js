@@ -33,7 +33,7 @@ function App() {
           <Route
             path="/profile"
             render={() => (
-              <Profile Rockets={rocketsReducer} missions={missionReducer} />
+              <Profile rockets={rocketsReducer} missions={missionReducer} />
             )}
           />
         </Switch>
