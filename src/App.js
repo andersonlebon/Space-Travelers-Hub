@@ -6,7 +6,6 @@ import Missions from './components/missions';
 import Profile from './components/profile';
 import Rockets from './components/rockets';
 import './sass/App.css';
-import { getMissions, getMissionsFromApi } from './redux/mission/mission';
 import { getRockets, getRocketsFromApi } from './redux/rockets/rockets';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +13,6 @@ function App() {
   const dispatch = useDispatch();
   const { rocketsReducer: a, missionReducer: b } = useSelector((state) => state);
   useEffect(() => {
-    getMissionsFromApi(dispatch, getMissions);
     getRocketsFromApi(dispatch, getRockets);
   }, []);
   return (

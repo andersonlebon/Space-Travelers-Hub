@@ -6,7 +6,6 @@ const missionsBasedURL = 'https://api.spacexdata.com/v3/missions';
 export const getMissionsFromApi = async (dispatch, getMissions) => {
   try {
     const { data } = await axios.get(missionsBasedURL);
-    console.log(data);
     dispatch(getMissions(data));
   } catch ({ message }) {
     dispatch({ type: 'getMissionsFail', payload: { error: message } });

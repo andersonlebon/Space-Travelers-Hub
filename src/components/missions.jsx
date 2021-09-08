@@ -1,7 +1,21 @@
 import React from 'react';
 import Mission from './common/mission';
+import { getMissions, getMissionsFromApi } from '../redux/mission/mission';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-const Missions = ({ store }) => (
+
+const Missions = ({ store }) => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if(store.length<0){
+    getMissionsFromApi(dispatch, getMissions);
+    }
+  }, []);
+
+  return(
   <section id="mission" className="mission">
     <table className="table table-bordered table-striped">
       <thead>
@@ -19,5 +33,6 @@ const Missions = ({ store }) => (
       </tbody>
     </table>
   </section>
-);
+  )
+};
 export default Missions;
