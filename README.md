@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![localhost_3000_ (2)](https://user-images.githubusercontent.com/65068771/132509636-950e7649-8214-4b06-a2cc-ff48b1e73744.png)
 
-## [demo](https://traveler-shub.netlify.app/)
+## [Dmo](https://traveler-shub.netlify.app/)
+
+### [Demostration video](https://youtu.be/WpS9uUggxTQ)
 
 ## Built With
 
@@ -49,7 +51,7 @@ For tracking linter errors locally you need to follow these steps:
 
 👤 **Anderson Caleb**
 
-- GitHub: [@Anhersonlebon](https://github.com/andersonlebon)
+- GitHub: [@Adersonlebon](https://github.com/andersonlebon)
 - Twitter: [@BuyananaCaleb](https://twitter.com/BuyananaCaleb)
 - LinkedIn: [Anderson Caleb](https://www.linkedin.com/in/anderson-caleb-915343209/)
 
