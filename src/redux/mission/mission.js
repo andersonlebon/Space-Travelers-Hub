@@ -35,7 +35,7 @@ const slice = createSlice({
     },
 
     reserveMission: (missions, action) => {
-      const index = missions.find((mission) => mission.mission_id === action.payload.mission_id);
+      const index = missions.find((mission) => mission.id === action.payload.id);
       index.reserved = !index.reserved;
     },
 

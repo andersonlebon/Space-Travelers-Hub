@@ -7,12 +7,11 @@ import { reserveMission } from '../../redux/mission/mission';
 const Mission = (props) => {
   const { mission } = props;
   const dispatch = useDispatch();
-  const handelReserved = (mission_id) => {
-    dispatch(reserveMission({ mission_id }));
-    console.log(mission);
+  const handelReserved = (id) => {
+    dispatch(reserveMission({ id }));
   };
   return (
-    <tr>
+    <tr id={mission.id}>
       <th scope="row">{mission.mission_name}</th>
       <td>{mission.description}</td>
       <td>
@@ -25,7 +24,7 @@ const Mission = (props) => {
       </td>
       <td>
         <button
-onClick={() => handelReserved(mission.mission_id)}
+onClick={() => handelReserved(mission.id) }
          className={
             mission.reserved ? 'mission-button exit' : 'mission-button'
           }

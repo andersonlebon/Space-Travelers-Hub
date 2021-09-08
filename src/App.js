@@ -12,22 +12,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const dispatch = useDispatch();
-  const { rocketsReducer: a } = useSelector((state) => state);
-  const { missionsReducer: b } = useSelector((state) => state);
-  console.log(a);
-  console.log(b)
+  const { rocketsReducer: a, missionReducer: b } = useSelector((state) => state);
   useEffect(() => {
     getMissionsFromApi(dispatch, getMissions);
     getRocketsFromApi(dispatch, getRockets);
   }, []);
-
   return (
     <main className="App">
       <BrowserRouter>
         <Header />
         <Switch>
           <Route path="/" exact render={() => <Rockets store={a} />} />
-          <Route path="/mission" exact render={() => <Missions store={a} />} />
+          <Route path="/mission" exact render={() => <Missions store={b} />} />
           <Route path="/profile" component={Profile} />
         </Switch>
       </BrowserRouter>
