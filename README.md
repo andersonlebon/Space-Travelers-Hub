@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![localhost_3000_ (2)](https://user-images.githubusercontent.com/65068771/132509636-950e7649-8214-4b06-a2cc-ff48b1e73744.png)
 
-## [Dmo](https://traveler-shub.netlify.app/)
+## [Demo](https://traveler-shub.netlify.app/)
 
 ### [Demostration video](https://youtu.be/WpS9uUggxTQ)
 
