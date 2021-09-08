@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import Header from './components/header';
-import Mission from './components/mission';
+import Missions from './components/missions';
 import Profile from './components/profile';
 import Rockets from './components/rockets';
 import './sass/App.css';
@@ -11,19 +11,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const dispatch = useDispatch();
-  const { rocketsReducer: store } = useSelector((state) => state);
-
+  const { rocketsReducer , missionReducer  } = useSelector((state) => state);
   useEffect(() => {
     getRocketsFromApi(dispatch, getRockets);
   }, []);
-
   return (
     <main className="App">
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/" exact render={() => <Rockets store={store} />} />
-          <Route path="/mission" component={Mission} />
+          <Route path="/" exact render={() => <Rockets store={rocketsReducer } />} />
+          <Route path="/mission" exact render={() => <Missions store={missionReducer } />} />
           <Route path="/profile" component={Profile} />
         </Switch>
       </BrowserRouter>
