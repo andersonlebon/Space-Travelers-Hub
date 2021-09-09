@@ -1,6 +1,7 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import Rocket from './common/rocket';
+import Proptypes from 'prop-types';
+
 
 const Rockets = ({ store }) => (
   <section className="rocket-section">
@@ -11,5 +12,10 @@ const Rockets = ({ store }) => (
     </ul>
   </section>
 );
+
+Rockets.propTypes = {
+  store: Proptypes.arrayOf(Proptypes.shape({})).isRequired,
+};
+
 
 export default Rockets;

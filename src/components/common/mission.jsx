@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-indent-props */
 import React from 'react';
 import Proptypes from 'prop-types';
 import { useDispatch } from 'react-redux';

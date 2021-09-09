@@ -3,6 +3,7 @@ import Mission from './common/mission';
 import { getMissions, getMissionsFromApi } from '../redux/mission/mission';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import Proptypes from 'prop-types';
 
 const Missions = ({ store }) => {
   const dispatch = useDispatch();
@@ -33,4 +34,9 @@ const Missions = ({ store }) => {
     </section>
   );
 };
+
+Missions.propTypes = {
+  store: Proptypes.arrayOf(Proptypes.shape({})).isRequired,
+};
+
 export default Missions;
