@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -21,10 +20,10 @@ const slice = createSlice({
       const apiMission = action.payload;
       apiMission.forEach(
         ({
-          mission_name: name, description, mission_id,
+          mission_name: name, description, mission_id: id,
         }) => {
           const newMission = {
-            id: mission_id,
+            id,
             mission_name: name,
             reserved: false,
             description,
