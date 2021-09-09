@@ -1,9 +1,8 @@
-import React from 'react';
-import Mission from './common/mission';
-import { getMissions, getMissionsFromApi } from '../redux/mission/mission';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import Proptypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { getMissions, getMissionsFromApi } from '../redux/mission/mission';
+import Mission from './common/mission';
 
 const Missions = ({ store }) => {
   const dispatch = useDispatch();
